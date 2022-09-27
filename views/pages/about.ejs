@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head %>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+    <title>Zhihao Yu Personal website</title>
+    <script src="https://kit.fontawesome.com/093ba5dd7e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <% include ../partials/header %>
+    </header>
+    <main>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <!-- personal image -->
+                        <img src="../../img/photo.jpg" alt="" class="personal-img">
+                    </div>
+                    <div class="about-col-2">
+                        <!-- introduction -->
+                        <div class="bar">
+                            <h1 class="sub-title">About Me</h1>
+                        </div>
+                        
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, quibusdam, maiores veniam
+                            nam error amet hic perspiciatis iste quisquam fuga alias sint id, quaerat velit laboriosam
+                            deserunt quae! Ipsa, dolores?Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+                            corrupti, fuga sint, deserunt, repudiandae iure voluptatum vel molestias aliquid aspernatur
+                            architecto. Saepe praesentium maiores consectetur quasi velit minima ea quo.</p>
+                        <!-- persoanl skill -->
+                    </div>
+                </div>
+                <div class="tab-title">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('working_exp')">Working Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tabs" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designning Web Interfaces</li>
+                        <li><span>Web Development</span><br>Web App Development</li>
+                        <li><span>Java</span><br>Back-end Development</li>
+                    </ul>
+                </div>
+                <!-- working experience -->
+                <div class="tab-contents" id="working_exp">
+                    <ul>
+                        <li><span>2022.4-current</span><br>ODOC Computer(Part-time)</li>
+                        <li><span style="color: #ef4523;">Position: Computer
+                                Technician</span><br>Responsibilities:Trouble shooting computer hardware problems
+                        </li>
+                        <li><span>2015.7-2022.4</span><br>China GZB International Engineering Company</li>
+                        <li><span style="color: #ef4523;">Position: Computer System
+                                Enginner</span><br>Responsibilities:</li>
+                    </ul>
+                </div>
+                <!-- education background -->
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022.9-current</span>
+                            <h3>Centennial College<h3>Program: Artificial Intelligence
+                        </li>
+                        <li><span>2018.9-2021.1</span>
+                            <h3>Beihang University<h3>Program: Master of Busniess Administration
+                        </li>
+                        <li><span>2011.9-2015.6</span>
+                            <h3>Beijing University of Civil Engineering and Architecture<h3>Program: Computer
+                                    Science
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+
+    <script>
+        const tablinks = document.getElementsByClassName("tab-links")
+        const tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link")
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tabs")
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tabs")
+        }
+    </script>
+</body>
+
+</html>

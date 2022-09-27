@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head %>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+    <title>Zhihao Yu Personal website</title>
+    <script src="https://kit.fontawesome.com/093ba5dd7e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <% include ../partials/header %>
+    </header>
+    <main>
+        <div id="contact">
+            <div class="container">
+                <div class="contact-row">
+                    <div class="contact-left">
+                        <div class="bar">
+                            <h1 class="sub-title">Contact Me</h1>
+                        </div>
+
+                        <p><i class="fas fa-paper-plane"></i>email:yzhatca@gmail.com</p>
+                        <p><i class="fas fa-phone-square-alt"></i>phone:4372551220</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                        <a href="../public/img/Personal resume.pdf" download class="btn btn2">Download My CV</a>
+                    </div>
+                    <div class="contact-right">
+                        <form name="ddcomment" method="post" action="posts">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2" onclick="myAlert()">Submit</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+<script>
+    function myAlert()
+{
+        alert('Submit success!');
+}
+</script>
+
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+</body>
+
+</html>
