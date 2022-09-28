@@ -5,13 +5,13 @@
     box-sizing: border-box;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
 body {
-    background: #080808;
-    color: #fff;
+    background: #fff;
+    color: #202020;
 }
 
 #header {
@@ -21,11 +21,12 @@ body {
     background-position: center;
 }
 
-#index{
+#index {
     width: 100%;
     height: 100vh;
     background-image: url(../img/personal.jpg);
-    background-size: cover;
+    background-size:contain;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
@@ -48,7 +49,7 @@ nav {
     margin-top: 20px;
 }
 
-.bar{
+.bar {
     margin-top: 30px;
 }
 
@@ -60,7 +61,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #202020;
     text-decoration: none;
     font-size: 18px;
     padding-left: 20px;
@@ -83,28 +84,30 @@ nav ul li a:hover::after {
     width: 90%;
 }
 
-.personal-img{
-    width:250px;
+.personal-img {
+    width: 250px;
     height: 320px;
 }
 
 /* -------about-------- */
 
-#about{
+#about {
     padding: 80px;
-    color: #ababab;
+    color: #202020;
+    height: 680px;
 }
 
-.row{
+.row {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.about-col-1{
+.about-col-1 {
     flex-basis: 35%;
 }
-.about-col-2{
+
+.about-col-2 {
     flex-basis: 65%;
 }
 
@@ -128,7 +131,7 @@ nav ul li a:hover::after {
 .tab-title {
     display: flex;
     margin: 20px 0 40px;
-} 
+}
 
 .tab-links {
     margin-right: 50px;
@@ -172,8 +175,9 @@ nav ul li a:hover::after {
 }
 
 /* ----------services------- */
-.services {
+#services {
     padding: 30px 0;
+    height: 550px;
 }
 
 .services-list {
@@ -184,9 +188,9 @@ nav ul li a:hover::after {
 }
 
 .services-list div {
-    background: #262626;
+    background: #ababab;
     padding: 40px;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 300;
     border-radius: 10px;
     transition: background 0.5s, transform 0.5s;
@@ -217,8 +221,9 @@ nav ul li a:hover::after {
 }
 
 /* --------------projects-----------------  */
-.projects {
+#projects {
     padding: 30px 0;
+    height: 900px;
 }
 
 .project-list {
@@ -228,11 +233,37 @@ nav ul li a:hover::after {
     margin-top: 50px;
 }
 
-.project {
-    border-radius: 10px;
+/* .project {
+    border: #080808;
+    border-radius: 10%;
     position: relative;
     overflow: hidden;
-}
+} */
+
+@keyframes animated-border {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255,45,25,0.4);
+    }
+    100% {
+       box-shadow: 0 0 0 20px rgba(255,45,25,0);
+    }
+  }
+  .project {
+    animation: animated-border 1.5s infinite;
+    font-family: Arial;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: bold;
+    color: white;
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 15px;
+
+    position: relative;
+    overflow: hidden;
+  }
+
+
 
 .project img {
     width: 100%;
@@ -244,7 +275,7 @@ nav ul li a:hover::after {
 .layer {
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+    background: linear-gradient(rgba(90, 90, 0, 0.5), #ff004f);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -256,7 +287,8 @@ nav ul li a:hover::after {
     flex-direction: column;
     padding: 0 40px;
     text-align: center;
-    font-size: 14px;
+    font-size: 18px;
+    color: #080808;
     transition: height 0.5s;
 }
 
@@ -278,6 +310,7 @@ nav ul li a:hover::after {
     text-align: center;
 }
 
+
 .project:hover img {
     transform: scale(1.1);
 }
@@ -294,7 +327,7 @@ nav ul li a:hover::after {
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
-    color: #fff;
+    color: #080808;
     transition: background 0.5s;
 }
 
@@ -321,9 +354,11 @@ nav ul li a:hover::after {
     font-size: 25px;
 }
 
-#contact{
+#contact {
     margin-top: 50px;
+    height: 550px;
 }
+
 .contact-row {
     display: flex;
 }
@@ -379,7 +414,7 @@ nav ul li a:hover::after {
     width: 100%;
     text-align: center;
     padding: 25px 0;
-    background: #080808;
+    background: #fff;
     font-weight: 300;
 }
 
@@ -393,7 +428,7 @@ nav .fa-solid {
 }
 
 @media only screen and (max-width:600px) {
-   /*  .header {
+    /*  .header {
          small image 
         background-image: url(images/);
     } */
@@ -445,32 +480,41 @@ nav .fa-solid {
         cursor: pointer;
     }
 
-    .sub-title{
+    .sub-title {
         font-size: 40px;
     }
-    .about-col-1, .about-col-2{
+
+    .about-col-1,
+    .about-col-2 {
         flex-basis: 100%;
     }
-    .about-col-1{
+
+    .about-col-1 {
         margin-bottom: 30px;
     }
-    .about-col-2{
+
+    .about-col-2 {
         font-size: 14px;
     }
-    .tab-links{
+
+    .tab-links {
         font-size: 16px;
-        margin-right:20px;
+        margin-right: 20px;
     }
+
     .contact-row {
         display: inline-block;
     }
-    .contact-left{
+
+    .contact-left {
         flex-basis: 100%;
     }
-    .contact-right{
+
+    .contact-right {
         flex-basis: 100%;
     }
-    .copyright{
+
+    .copyright {
         font-size: 14px;
     }
 }

@@ -11,25 +11,23 @@
 </head>
 
 <body>
-    <div id="header">
-        <div class="contanier">
-            <nav>
-                <!-- personal icon -->
-                <img src="images.jpeg" alt="" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Me</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact Me</a></li>
-                </ul>
-            </nav>
-            <div class="header-text">
-                <p>Js Web developer</p>
-                <h1>Hi,I'm <span>Howard Yu</span> <br> from China</h1>
+
+    <header>
+        <% include ../partials/header %>
+    </header>
+    <main>
+        <div id="index">
+            <div class="contanier">
+                <div class="header-text">
+                    <p>Js Web developer</p>
+                    <h1>Hi,I'm <span>Howard Yu</span> <br> from China</h1>
+                </div>
             </div>
         </div>
-    </div>
+    </main>
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
 </body>
 
 </html>
