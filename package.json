@@ -1,14 +1,13 @@
 {
   "name": "portfolio-yzh",
   "version": "1.0.1",
-  "description": "demo app for portfolio",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node ./app.js"
   },
   "engines": {
-    "node": "",
-    "npm": ""
+    "node": "^16.13.2",
+    "npm": "^8.1.2"
   },
   "keywords": [],
   "author": "yzh",
@@ -30,5 +29,6 @@
   "bugs": {
     "url": "https://github.com/yzhatca/COM229_project/issues"
   },
-  "homepage": "https://github.com/yzhatca/COM229_project#readme"
+  "homepage": "https://github.com/yzhatca/COM229_project#readme",
+  "description": ""
 }
