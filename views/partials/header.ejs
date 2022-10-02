@@ -10,20 +10,21 @@
                 <li><a href="projects">Projects</a></li>
                 <li><a href="services">Services</a></li>
                 <li><a href="contact">Contact Me</a></li>
-                <i class="fas fa-times" onclick="closeMenu()"></i>
+                
+                <i class="fas fa-times-square" onclick="closeMenu()"></i>
             </ul>
             <i class="fa-solid fa-bars" onclick="openMenu()"></i>
         </nav>
     </div>
 
     <script>
-        var sidemenu = document.getElementById("sidemenu");
+        var sidemenu = document.getElementById("sideMenu");
     
-        function openmenu(){
+        function openMenu(){
             sidemenu.style.right = "0";
         }
     
-        function closemenu(){
+        function closeMenu(){
             sidemenu.style.right = "-200px";
         }
     </script>
