@@ -1,3 +1,5 @@
+<!-- // Name: Zhihao Yu
+// ID: 301305633 -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,15 +31,23 @@
                             <h1 class="sub-title">About Me</h1>
                         </div>
                         <br>
-                        <p>Hey there! Welcome to my page. I'm Zhihao Yu from Beijing, China. For now, I live in 
-                            Toronto, Canada and study at Centennial College. From this page, you can find my working and education
-                            background, and also the projects I have done, and the services I could provide. I have one year of JavaScript, 
-                            NodeJs development experience, and I'm learning Java and Python development languages now. If you want to contact
+                        <p>Hey there! Welcome to my page. I'm Zhihao Yu from Beijing, China. For now, I live in
+                            Toronto, Canada and study at Centennial College. From this page, you can find my working and
+                            education
+                            background, and also the projects I have done, and the services I could provide. I have one
+                            year of JavaScript,
+                            NodeJs development experience, and I'm learning Java and Python development languages now.
+                            If you want to contact
                             me, please leave your message on the "contact me“ page, and I will contact you soon.
                         </p>
-                        <!-- persoanl skill -->
+                        <div class="view">
+                            <a href="#javascript" onclick="show(0)" class="view-a">View My Resume</a>
+                            <embed src="/img/Personal resume.pdf" width="600" height="600" type="application/pdf"
+                                class="view-box" style="display:none">
+                        </div>
                     </div>
                 </div>
+                <!-- persoanl skill -->
                 <div class="tab-title">
                     <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                     <p class="tab-links" onclick="opentab('working_exp')">Working Experience</p>
@@ -54,7 +64,8 @@
                 <div class="tab-contents" id="working_exp">
                     <ul>
                         <li><span>2022.4-current</span><br>ODOC Computer(Part-time)</li>
-                        <li><span style="color: #ef4523;">Position: Computer Technician</span><br>Responsibilities:Trouble shooting computer hardware problems
+                        <li><span style="color: #ef4523;">Position: Computer
+                                Technician</span><br>Responsibilities:Trouble shooting computer hardware problems
                         </li>
                         <li><span>2015.7-2022.4</span><br>China GZB International Engineering Company</li>
                         <li><span style="color: #ef4523;">Position: Computer System
@@ -72,18 +83,19 @@
                         </li>
                         <li><span>2011.9-2015.6</span>
                             <br>Beijing University of Civil Engineering and Architecture<br>Program: Computer
-                                    Science
+                            Science
                         </li>
                     </ul>
+                </div>
+                <div class="copyright">
+                    <p>Copyright @ yzh </p>
                 </div>
             </div>
         </div>
     </main>
-
-    <footer>
+    <footer style="display:none">
         <% include ../partials/footer %>
     </footer>
-
     <script>
         const tablinks = document.getElementsByClassName("tab-links")
         const tabcontents = document.getElementsByClassName("tab-contents");
@@ -97,6 +109,22 @@
             }
             event.currentTarget.classList.add("active-link")
             document.getElementById(tabname).classList.add("active-tabs")
+        }
+
+        function show(num) {
+            var content = document.getElementsByClassName('view-box');
+            content = content[num];
+
+            // 如果对象中的diplay状态为none
+            if (content.style.display == "none") {
+
+                // 将该对象的diplay属性修改为block进行显示
+                content.style.display = "block";
+            } else {
+
+                // 否则修改为none进行隐藏
+                content.style.display = "none";
+            }
         }
     </script>
 </body>

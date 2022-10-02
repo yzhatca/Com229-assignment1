@@ -1,3 +1,5 @@
+// Name: Zhihao Yu
+// ID: 301305633
 const mongoose = require('mongoose')
 const PostSchema = mongoose.Schema({
     name:{

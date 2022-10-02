@@ -1,3 +1,7 @@
+/* // Name: Zhihao Yu
+// ID: 301305633 */
+
+
 * {
     margin: 0;
     padding: 0;
@@ -89,7 +93,7 @@ nav ul li a:hover::after {
     height: 320px;
 }
 
-/* -------about-------- */
+/* -------about page content-------- */
 
 #about {
     padding: 80px;
@@ -111,6 +115,24 @@ nav ul li a:hover::after {
     flex-basis: 65%;
 }
 
+.view-a{
+    display: block;
+    margin: 50px 0;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #080808;
+    transition: background 0.5s;
+}
+
+.view-a:hover,  .view-a:focus {
+    background: #ff004f;
+}
+.view-a:active  {
+    background: #ff004f;
+}
 
 .header-text {
     margin-top: 50px;
@@ -174,7 +196,7 @@ nav ul li a:hover::after {
     display: block;
 }
 
-/* ----------services------- */
+/* ----------services page content------- */
 #services {
     padding: 30px 0;
     height: 550px;
@@ -220,7 +242,7 @@ nav ul li a:hover::after {
     transform: translateY(-10px);
 }
 
-/* --------------projects-----------------  */
+/* --------------projects  page content-----------------  */
 #projects {
     padding: 30px 0;
     height: 900px;
@@ -335,7 +357,7 @@ nav ul li a:hover::after {
     background: #ff004f;
 }
 
-/* -------contact----------- */
+/* -------contact page content----------- */
 .contact-left {
     flex-basis: 35%;
 }

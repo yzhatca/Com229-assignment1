@@ -1,3 +1,6 @@
+// Name: Zhihao Yu
+// ID: 301305633
+
 const express = require("express")
 const app = express()
 const postRoute = require('./routes/posts')
@@ -7,15 +10,7 @@ const cors = require('cors')
 
 require("dotenv/config")
 
-/* require('dotenv').config();
-
-const mongoString = process.env.DATABASE_URL */
-
-//端口
-/* app.listen(3000, () => {
-    console.log('server is on')
-}) */
-
+// Connect to mongodb atlas 
 mongoose.connect(process.env.DB_CONNECTION, {
     useUnifiedTopology: true,
     useNewUrlParser: true
@@ -43,9 +38,9 @@ app.use(function(err, req, res, next) {
     res.render('error', { title: 'Error'});
   });
 
-// use res.render to load up an ejs view file
-
+//Express Route
 // index page 
+// use res.render to load up an ejs view file
 app.get('/', (req, res) => {
     res.render('pages/index');
 });

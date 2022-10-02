@@ -1,11 +1,12 @@
+// Name: Zhihao Yu
+// ID: 301305633
 const express = require("express")
 const router = express.Router()
 const Post = require('../models/Post')
-const path = require('path');
 const app = express()
 app.set('view engine', 'ejs');
-//添加数据
-//添加数据
+
+// get data 
 router.post('/', async (req, res) => {
     const post = new Post({
         name: req.body.name,
@@ -13,8 +14,8 @@ router.post('/', async (req, res) => {
         message: req.body.message
     })
     try {
-        const savePost = await post.save();
-            res.render('../views/pages/index');
+        await post.save();
+        res.render('../views/pages/index');
     } catch (err) {
         res.json({
             message: err
